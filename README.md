@@ -3,6 +3,22 @@ SLAG-V is a semi-Lagrangian guiding-center-Lorentz hybrid approach to resolving 
 
 List of what the files are and what they do:
 - mmap_data: adjustments to the interpolated MHD file that allow it to be read better into SLAG-V
+- 3d__var_1_e20251231-0xx000-000.out: Output MHD fields from BATSRUS. The time xx are replaced with the hour and time, so 1:30 UTC is represented by ...013000-000.out.
+- 5D_distribution.ipynb: Main simulation code
+- dn_magn-l2-avg1m_g18_d20251231_v2-0-4.nc: magnetic Bz readings from GOES-18 from 00:00 - 02:00 UTC
+- Earth.jpg: Earth image for plotting
+- goes18_ephemeris_ssc_20250101_v01.cdf: Satellite ephemeris of GOES-18 from 00:00 - 02:00 UTC
+- IGRF_Baked_Float.pkl: File containing all the IGRF data required to run the code (not important to the actual calculations, but still needs to be edited out of the code)
+- igrf14coeffs.txt: IGRF 14 coefficients given in a text file
+- IGRFGridValues.ipynb: file that creates IGRF_Baked_Float.pkl
+- Interpolators_4D_float32.pkl: Interpolated MHD fields given in space and time in single-precision
+- LICENSE: Apache License
+- ops_seis-l1b-mpsl_g18_d20251231_v0-0-0: MPS-LO GOES-18 readings from 00:00-02:00 UTC
+- plot_all3.ipynb: plotting file that requires outputs from all three solvers (LAG-GC, LAG-L, and SLAG-V). However, it can be edited to just require output from a single solver. Most up-to-date version of the plots
+- plot_SLACMAVS.ipynb: Old version of the plotting code that plots LAG-GC alone
+- PrecomputeGridValuesTime.ipynb: File that creates Interpolators_4D_Float32.pkl
+- README: READ ME file
+- sci_mpsh-l2-avg1m_g18_d20251231_v2-0-2: MPS-HI GOES-18 readings from 00:00-02:00 UTC
 
 Make sure to adjust the datetime (sim_start_unix) across all files to match your date of interest. Everything is currently set up to begin on December 31st, 2025 at 00:00 and end at 02:00 UTC (STORM_DURATION). All the associated parameters are taken from that time as well.
 
