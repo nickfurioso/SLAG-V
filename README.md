@@ -3,6 +3,7 @@ SLAG-V is a semi-Lagrangian guiding-center-Lorentz hybrid approach to resolving 
 
 List of what the files are and what they do:
 - mmap_data: adjustments to the interpolated MHD file that allow it to be read better into SLAG-V
+      - Each file represents the gap files (outdated, not used) and the MHD files that are saved individually for each variable (B_x, B_y, B_z magnetic field magnitudes, gradients of those quantities, the grid structure in time, x, y, and z, the kappa curvature vector in each direction, the boltzmann-scaled temperature kT, number density n, and bulk velocity V in each direction)
 - 3d__var_1_e20251231-0xx000-000.out: Output MHD fields from BATSRUS. The time xx are replaced with the hour and time, so 1:30 UTC is represented by ...013000-000.out.
 - 5D_distribution.ipynb: Main simulation code
 - dn_magn-l2-avg1m_g18_d20251231_v2-0-4.nc: magnetic Bz readings from GOES-18 from 00:00 - 02:00 UTC
